@@ -1,4 +1,5 @@
 from matplotlib import pyplot as plt
+# pip install matplotlib
 
 plt.xkcd()      # xkcd comic style
 
