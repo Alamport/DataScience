@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load the dataset​
-unemployment_df = pd.read_csv("unemployment.csv")
+unemployment_df = pd.read_csv("Datathon_Education_on_unemployment/unemployment.csv")
 
 # Extract relevant columns for the years 2000 to 2020 and the urbanization level category​
 

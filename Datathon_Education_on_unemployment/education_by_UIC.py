@@ -2,12 +2,10 @@ import pandas as pd
 
 import matplotlib.pyplot as plt
 
-# Load the dataset​
+# loads the dataset​
+df = pd.read_csv("Datathon_Education_on_unemployment/education.csv") 
 
-df = pd.read_csv("education.csv") # Replace "your_dataset.csv" with the actual filename​
-
-# Extract relevant columns​
-
+# extracts relevant columns​
 urbanization_column = "City/Suburb/Town/Rural 2013"
 
 education_columns = [
@@ -16,25 +14,23 @@ education_columns = [
         "Percent of adults completing some college or associate's degree, 2015-19",
         "Percent of adults with a bachelor's degree or higher, 2015-19"
 ]
-# Group the data by urbanization level and calculate the average percent of education level for each category​
 
+# groups the data by urbanization level and calculate the average percent of education level for each category​
 average_education = df.groupby(urbanization_column)[education_columns].mean()
-# Calculate the national average of each education level across all urbanization levels​
 
+# calculates the national average of each education level across all urbanization levels​
 national_average = df[education_columns].mean()
 
-# Add a row for national average to the average_education DataFrame​
-
+# adds a row for national average to the average_education DataFrame​
 average_education.loc['National Average'] = national_average
 
-# Plot the data​
-
+# plots the data​
 plt.figure(figsize=(10, 6))
 
 index = list(average_education.index)
 x = range(len(index))
-# Plot stacked bar chart for each urbanization level​
 
+# plots stacked bar chart for each urbanization level​
 bottom = None
 
 for i, column in enumerate(education_columns):
@@ -53,13 +49,8 @@ for i, column in enumerate(education_columns):
                 plt.title('Average Percent of Education Level by Urbanization Level')
 
 
-
-# Place the legend outside the plot​
-
+# places the legend outside the plot​
 plt.legend(["Less than a high school diploma", "High school diploma only", "Some college or associate's degree", "Bachelor's degree or higher"] ,loc='center left', bbox_to_anchor=(1, 0.5))
-
 plt.tight_layout()
-
 plt.savefig("education_level_by_area.png")
-
 plt.show()

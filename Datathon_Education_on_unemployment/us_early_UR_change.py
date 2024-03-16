@@ -6,7 +6,7 @@ from collections import Counter
 
 plt.style.use('fivethirtyeight')
 
-data = pd.read_csv('unemployment.csv')
+data = pd.read_csv('Datathon_Education_on_unemployment/unemployment.csv')
 
 columns_of_interest = [
         'Unemployment_rate_2000',
