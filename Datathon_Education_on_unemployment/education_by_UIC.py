@@ -1,5 +1,18 @@
+###############################################################################
+# education_by_UIC.py                                    
+#
+# The program explores the relationship between urbanization level (such as 
+# urban/town/suburb/city) and education level. Perhaps expected, cities had the
+# highest percentage of people with an associate degree or even higher. On top
+# of this, cities also had the highest percentage of people with less than a 
+# high school diploma which shows the duality of such a populous area. Using 
+# this information, it goes with the idea that the rich and poor live in the 
+# same area, without people in the middle (as the cost of living is too high
+# for jobs that might not have same financial return).
+#
+# Adin Lamport (March, 2024)
+###############################################################################
 import pandas as pd
-
 import matplotlib.pyplot as plt
 
 # loads the dataset​
@@ -52,5 +65,5 @@ for i, column in enumerate(education_columns):
 # places the legend outside the plot​
 plt.legend(["Less than a high school diploma", "High school diploma only", "Some college or associate's degree", "Bachelor's degree or higher"] ,loc='center left', bbox_to_anchor=(1, 0.5))
 plt.tight_layout()
-plt.savefig("education_level_by_area.png")
+# plt.savefig("education_level_by_area.png")
 plt.show()

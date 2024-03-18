@@ -1,5 +1,17 @@
+###############################################################################
+# unemplyment_by_UIC.py                                    
+#
+# The program aims to discover how unemployment rates have changed throughout a # lenght of 20 years (2020 - 2022) in different urbanization levels. The 
+# conclusion fromm the data state comfortably that suburban areas always 
+# struggle the most compared to other areas and rural areas remain the least
+# affected. One reasoning regarding the latter is that people who work in rural
+# areas have jobs that are a necessity to society, such as farming. So when
+# the economy of the country falls, as these jobs are indispensable, workers in 
+# rural areas are not laid off.
+#
+# Adin Lamport (March, 2024)
+###############################################################################
 import pandas as pd
-
 import matplotlib.pyplot as plt
 
 # Load the dataset​

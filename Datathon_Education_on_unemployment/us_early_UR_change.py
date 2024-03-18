@@ -1,3 +1,13 @@
+###############################################################################
+# us_early_UR_change.py                                    
+#
+# The program aims to find how the average unemployment rate in the US has 
+# changed throughout a small timeframe (2000 - 2003). Instead of looking at the
+# individual percentage for a given year, the graph illustrates the percent
+# change between the various years.
+#
+# Adin Lamport (March, 2024)
+###############################################################################
 import csv
 import numpy as np
 import pandas as pd

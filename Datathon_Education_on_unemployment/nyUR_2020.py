@@ -1,3 +1,14 @@
+###############################################################################
+# nyUR_2020.py                                    
+#
+# The program aims to find the association between locations in a specific 
+# state (NY) with unemployment rates. Using this information, a further study
+# can be condued to analyze the specific counties (in NY) that have high or
+# low unemployment rates. One can wonder, does the type of area (UIC) have any
+# affect on unemployment rates?
+#
+# Adin Lamport (March, 2024)
+###############################################################################
 import csv
 import numpy as np
 import pandas as pd
@@ -38,7 +49,6 @@ unemployment_rate_NY = filtered_data[columns_of_interest]
 
 year = list(range(2000, 2021))
 
-
 # plots the data
 plt.bar(list(unemployment_rate_NY['FIPS_Code']), list(unemployment_rate_NY['Unemployment_rate_2000']), )
 
@@ -49,5 +59,5 @@ plt.xlabel("FIPS_Code")
 
 plt.tight_layout()  
 
-plt.savefig('Unemployment_Rate_NY_2020.png')
+# plt.savefig('Unemployment_Rate_NY_2020.png')
 plt.show()
