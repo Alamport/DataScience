@@ -76,3 +76,4 @@ plt.tight_layout()
 
 # plt.savefig('NAME.png')
 plt.show()
+# quick change sorry abt this
